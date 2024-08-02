@@ -28,9 +28,33 @@
       ]
     },
     {
-      "UpstreamPathTemplate": "/registerregiste",
+      "UpstreamPathTemplate": "/getUserById/{id}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/getUserById/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7005
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/register",
       "UpstreamHttpMethod": [ "POST" ],
       "DownstreamPathTemplate": "/register",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7005
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/login",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/login",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
