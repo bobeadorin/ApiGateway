@@ -65,13 +65,85 @@
     },
     {
       "UpstreamPathTemplate": "/refresh",
-      "UpstreamHttpMethod": [ "POST" ],
+      "UpstreamHttpMethod": [ "GET" ],
       "DownstreamPathTemplate": "/refresh",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
           "Port": 7005
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/getAllJokes",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/getAllJokes",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7014
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/likeJokeById/{id}",
+      "UpstreamHttpMethod": [ "PUT" ],
+      "DownstreamPathTemplate": "/likeJokeById/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7014
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/dislikeJokeById/{id}",
+      "UpstreamHttpMethod": [ "PUT" ],
+      "DownstreamPathTemplate": "/dislikeJokeById/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7014
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/getAllJokesByPagination{pageNumber},{pageSize}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/getAllJokesByPagination{pageNumber},{pageSize}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7014
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/postJoke",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/postJoke",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7014
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/deleteJokeById/{Id}",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "DownstreamPathTemplate": "/deleteJokeById/{Id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7014
         }
       ]
     }

@@ -1,4 +1,3 @@
-
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
 
@@ -10,21 +9,23 @@ namespace ApiGateway
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
             var allowedOrigins = "http://localhost:5173";
             var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
             builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
             builder.Configuration.AddJsonFile("gatewayConfig.json", optional: false, reloadOnChange:true);
+
             builder.Services.AddCors( options =>
             {
                 options.AddPolicy(MyAllowSpecificOrigins, builder => builder.WithOrigins(allowedOrigins)
                     .AllowAnyMethod()
-                    .AllowAnyHeader()); 
+                    .AllowAnyHeader()
+                    .AllowCredentials());
             });
+
             builder.Services.AddOcelot(builder.Configuration);
 
 
