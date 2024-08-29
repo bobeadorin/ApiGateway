@@ -28,6 +28,18 @@
       ]
     },
     {
+      "UpstreamPathTemplate": "/getUser",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/getUser",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7005
+        }
+      ]
+    },
+    {
       "UpstreamPathTemplate": "/getUserById/{id}",
       "UpstreamHttpMethod": [ "GET" ],
       "DownstreamPathTemplate": "/getUserById/{id}",
@@ -55,6 +67,18 @@
       "UpstreamPathTemplate": "/login",
       "UpstreamHttpMethod": [ "POST" ],
       "DownstreamPathTemplate": "/login",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7005
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/logout",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/logout",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -112,9 +136,9 @@
       ]
     },
     {
-      "UpstreamPathTemplate": "/getAllJokesByPagination{pageNumber},{pageSize}",
+      "UpstreamPathTemplate": "/getAllJokesByPagination/{pageNumber}/{pageSize}",
       "UpstreamHttpMethod": [ "GET" ],
-      "DownstreamPathTemplate": "/getAllJokesByPagination{pageNumber},{pageSize}",
+      "DownstreamPathTemplate": "/getAllJokesByPagination/{pageNumber}/{pageSize}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
