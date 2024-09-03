@@ -218,6 +218,18 @@
           "Port": 7014
         }
       ]
+    },
+    {
+      "UpstreamPathTemplate": "/getUserFavoriteJokes",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/getUserFavoriteJokes",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7014
+        }
+      ]
     }
   ]
 }
