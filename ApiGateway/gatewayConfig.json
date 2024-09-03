@@ -16,6 +16,30 @@
       ]
     },
     {
+      "UpstreamPathTemplate": "/ping",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/ping",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7005
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/FollowUser",
+      "UpstreamHttpMethod": [ "PUT" ],
+      "DownstreamPathTemplate": "/FollowUser",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7005
+        }
+      ]
+    },
+    {
       "UpstreamPathTemplate": "/getAllUsers",
       "UpstreamHttpMethod": [ "GET" ],
       "DownstreamPathTemplate": "/getAllUsers",
@@ -100,6 +124,18 @@
       ]
     },
     {
+      "UpstreamPathTemplate": "/getUserByUsername/{username}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/getUserByUsername/{username}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7005
+        }
+      ]
+    },
+    {
       "UpstreamPathTemplate": "/getAllJokes",
       "UpstreamHttpMethod": [ "GET" ],
       "DownstreamPathTemplate": "/getAllJokes",
@@ -112,9 +148,21 @@
       ]
     },
     {
-      "UpstreamPathTemplate": "/likeJokeById/{id}",
+      "UpstreamPathTemplate": "/addToFavorite",
       "UpstreamHttpMethod": [ "PUT" ],
-      "DownstreamPathTemplate": "/likeJokeById/{id}",
+      "DownstreamPathTemplate": "/addToFavorite",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7014
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/likeJokeById",
+      "UpstreamHttpMethod": [ "PUT" ],
+      "DownstreamPathTemplate": "/likeJokeById",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -136,9 +184,9 @@
       ]
     },
     {
-      "UpstreamPathTemplate": "/getAllJokesByPagination/{pageNumber}/{pageSize}",
+      "UpstreamPathTemplate": "/getAllJokesByPagination/{pageNumber}/{pageSize}/category/{category}",
       "UpstreamHttpMethod": [ "GET" ],
-      "DownstreamPathTemplate": "/getAllJokesByPagination/{pageNumber}/{pageSize}",
+      "DownstreamPathTemplate": "/getAllJokesByPagination/{pageNumber}/{pageSize}/category/{category}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
