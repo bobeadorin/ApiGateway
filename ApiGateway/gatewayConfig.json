@@ -230,6 +230,54 @@
           "Port": 7014
         }
       ]
+    },
+    {
+      "UpstreamPathTemplate": "/getPostedJokes/{userId}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/getPostedJokes/{userId}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7014
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/getItems/{category}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/getItems/{category}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7097
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/getItemByIdentifier/{id}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/getItemByIdentifier/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7097
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/addToCart",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/addToCart",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7097
+        }
+      ]
     }
   ]
 }
